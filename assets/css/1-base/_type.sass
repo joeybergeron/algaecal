@@ -13,33 +13,44 @@ h4,
 h5,
 h6,
 p,
-blockquote
-  font-size: 20px
+blockquote,
+ul,
+ol
+  font-size: 18px
   font-weight: 400
-  line-height: 1.2
+  line-height: 1.5
   color: $default-text
   margin: 0 0 20px 0
   padding: 0
 
 h1
 	font-size: calc(16px + 3vw)
+	line-height: 1.2
 
 h2
 	font-size: calc(16px + 2.5vw)
+	line-height: 1.2
 
 h3
 	font-size: calc(16px + 2vw)
+	line-height: 1.2
 
 h4
 	font-size: calc(16px + 1.5vw)
+	line-height: 1.2
 
 h5
 	font-size: calc(16px + 1vw)
+	line-height: 1.2
 
 ul, li
   margin: 0
   padding: 0
   list-style: none
+
+ol
+	li
+		list-style: inherit
 
 em
 	font-family: 'GloberRegularItalic'
@@ -55,6 +66,9 @@ hr
   clear: both
   margin: 10px 0 30px
   height: 0
+
+a
+	color: $link-blue-text
 
 .text-semi-bold
 	font-family: 'GloberSemiBold'
