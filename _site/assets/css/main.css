@@ -6293,38 +6293,56 @@ button.close {
 
 @font-face {
   font-family: 'GloberBold';
-  src: url("/assets/fonts/glober/Glober.Bold.eot");
+  src: url("/assets/fonts/glober/Glober.Bold.otf");
   src: url("/assets/fonts/glober/GloberBold.woff2") format("woff2"), url("/assets/fonts/glober/GloberBold.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'GloberSemiBold';
-  src: url("/assets/fonts/glober/Glober.Semi.Bold.eot");
+  src: url("/assets/fonts/glober/Glober.Semi.Bold.otf");
   src: url("/assets/fonts/glober/GloberSemiBold.woff2") format("woff2"), url("/assets/fonts/glober/GloberSemiBold.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'GloberSemiBoldItalic';
-  src: url("/assets/fonts/glober/Glober.Semi.Bold.Italic.eot");
+  src: url("/assets/fonts/glober/Glober.Semi.Bold.Italic.otf");
   src: url("/assets/fonts/glober/GloberSemiBoldItalic.woff2") format("woff2"), url("/assets/fonts/glober/GloberSemiBoldItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'GloberRegular';
-  src: url("/assets/fonts/glober/Glober.Bold.Regular.eot");
-  src: url("/assets/fonts/glober/GloberBoldRegular.woff2") format("woff2"), url("/assets/fonts/glober/GloberBoldRegular.woff") format("woff");
+  src: url("/assets/fonts/glober/Glober.Regular.otf");
+  src: url("/assets/fonts/glober/GloberRegular.woff2") format("woff2"), url("/assets/fonts/glober/GloberRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'GloberRegularItalic';
-  src: url("/assets/fonts/glober/Glober.Bold.Regular.Italic.eot");
-  src: url("/assets/fonts/glober/GloberBoldRegularItalic.woff2") format("woff2"), url("/assets/fonts/glober/GloberBoldRegularItalic.woff") format("woff");
+  src: url("/assets/fonts/glober/Glober.Regular.Italic.otf");
+  src: url("/assets/fonts/glober/GloberRegularItalic.woff2") format("woff2"), url("/assets/fonts/glober/GloberRegularItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+
+body {
+  background-color: #fff; }
+
+.blue-text {
+  color: #008ba4; }
+
+.green-text {
+  color: #41ad49; }
+
+.gray-text {
+  color: #728085; }
+
+.white-text {
+  color: #fff; }
+
+.orange-text {
+  color: #e87b15; }
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -6340,38 +6358,48 @@ h4,
 h5,
 h6,
 p,
-blockquote {
-  font-size: 20px;
+blockquote,
+ul,
+ol {
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
   margin: 0 0 20px 0;
   padding: 0; }
 
 h1 {
   font-size: -webkit-calc(16px + 3vw);
-  font-size: calc(16px + 3vw); }
+  font-size: calc(16px + 3vw);
+  line-height: 1.2; }
 
 h2 {
   font-size: -webkit-calc(16px + 2.5vw);
-  font-size: calc(16px + 2.5vw); }
+  font-size: calc(16px + 2.5vw);
+  line-height: 1.2; }
 
 h3 {
   font-size: -webkit-calc(16px + 2vw);
-  font-size: calc(16px + 2vw); }
+  font-size: calc(16px + 2vw);
+  line-height: 1.2; }
 
 h4 {
   font-size: -webkit-calc(16px + 1.5vw);
-  font-size: calc(16px + 1.5vw); }
+  font-size: calc(16px + 1.5vw);
+  line-height: 1.2; }
 
 h5 {
   font-size: -webkit-calc(16px + 1vw);
-  font-size: calc(16px + 1vw); }
+  font-size: calc(16px + 1vw);
+  line-height: 1.2; }
 
 ul, li {
   margin: 0;
   padding: 0;
   list-style: none; }
+
+ol li {
+  list-style: inherit; }
 
 em {
   font-family: "GloberRegularItalic";
@@ -6387,6 +6415,9 @@ hr {
   clear: both;
   margin: 10px 0 30px;
   height: 0; }
+
+a {
+  color: #008ba4; }
 
 .text-semi-bold {
   font-family: 'GloberSemiBold'; }
