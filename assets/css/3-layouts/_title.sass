@@ -1,0 +1,60 @@
+.title-section
+	padding: 1em 0
+	background-color: #4a823c
+	background-image: url(/assets/img/green-bg.jpg)
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	margin-bottom: 1.5em
+
+	h1
+		color: $white-text
+
+	.main-title
+		padding-left: 1em
+		padding-right: 1em
+
+	.title-lines
+		padding: 1em 0 0.5em 0
+		line-height: 0.3
+		text-align: center
+		text-transform: uppercase
+		font-family: 'GloberBold'
+
+		span
+			display: inline-block
+			position: relative
+
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				height: 5px
+				border-top: 2px solid white
+				top: 0
+				width: 100%
+
+				@media all and (max-width: 996px)
+					max-width: 260px
+
+				@media all and (max-width: 768px)
+					max-width: 150px
+
+				@media all and (max-width: 440px)
+					max-width: 78px
+
+			&:before
+				right: 100%
+				margin-right: 15px
+
+			&:after
+				left: 100%
+				margin-left: 15px
+
+	.red-underline
+		font-size: calc(100% + 40%)
+		position: relative
+		display: inline
+		line-height: 1.2
+		padding-bottom: 8px
+		background: url(/assets/img/redline.png) repeat-x 0 80%

@@ -1,0 +1,102 @@
+.products
+	width: 90%
+	margin: auto
+	display: block
+
+.product-card-wrapper
+	margin-top: 1em
+	margin-bottom: 3em
+	padding: 10px
+
+	.product-card
+		padding: 20px
+		text-align: center
+		background-color: #fff
+		box-shadow: 0 0 22px rgba(0,0,0,.35)
+
+		.producut-card--header
+			h3
+				padding-top: .75em
+				margin-bottom: 0
+				font-size: 2.4em
+
+				@media all and (max-width: 768px)
+					font-size: 25px
+
+
+		.product-card--feature
+			img
+				padding-bottom: 20px
+				margin: 0 auto
+
+			.discount-value
+				position: absolute
+				top: -20px
+				right: 0px
+				height: 70px
+				width: 70px
+				border-radius: 50%
+				box-shadow: -1px 0 13px 0 rgba(100,100,100,.75)
+				background-color: #e9872a
+				color: #fff
+
+				strong
+					position: absolute
+					padding: 20px
+					left: 50%
+					transform: translate(-50%,0)
+					text-align: center
+					font-family: 'GloberBold'
+					font-size: 18px
+					line-height: 1
+
+				.amount
+					font-size: 125%
+
+		.price
+			font-size: 34px
+			line-height: 1
+
+			.dollar
+				font-size: 70%
+
+			.currency
+				display: inline-block
+				font-size: 16px
+				transform: translateY(-22%)
+
+	a.add-to-cart-cta-btn
+		position: relative
+		color: $white-text
+
+		&:hover
+			color: $white-text
+			text-decoration: none
+
+		.guarantee
+			position: absolute
+			left: -14px
+			top: -21px
+			width: 90px
+			height: 90px
+
+	.highlighter
+		background-image: url(/assets/img/yellow-highlight.png)
+		background-size: 70% 70%
+		background-repeat: no-repeat
+		background-position: 37px
+		padding: 0px
+
+.most-popular
+	margin-top: 0
+	padding: 3px 8px 8px
+	background-color: #008ba4
+	box-shadow: -1px 0 13px 0 rgba(100,100,100,.75)
+
+	.most-popular-label
+		color: $white-text
+		letter-spacing: 2px
+		text-align: center
+		text-transform: uppercase
+		font-family: 'GloberBold'
+		padding: 2px

@@ -1,0 +1,63 @@
+.card
+	margin: 3em auto
+	box-shadow: 0 0 22px rgba(0,0,0,.35)
+
+	.card-title-bg
+		background-color: #4c813d
+		padding: 1em
+
+		.card-title
+			font-size: 2em
+			line-height: 1
+			font-family: 'GloberBold'
+			color: $white-text
+			margin: 0 0 -10px 0
+			text-align: center
+
+	.as-seen-on
+		padding: 2em
+
+		@media all and (max-width: 768px)
+			padding: 0
+
+		.top-row
+			display: flex
+			flex-direction: row
+			align-items: center
+			flex-wrap: nowrap
+			justify-content: space-between
+			padding-bottom: 1em
+
+			@media all and (max-width: 768px)
+				padding-bottom: 0
+
+			.top-row--box
+				padding: 1em
+
+				.box-logo
+					max-height: 78px
+
+		.bottom-row
+			display: flex
+			flex-direction: row
+			align-items: center
+			flex-wrap: nowrap
+
+			.bottom-row--box
+				padding: 1em
+				width: 50%
+
+				img
+
+					@media all and (max-width: 996px)
+						max-height: 80px
+
+					@media all and (max-width: 768px)
+						max-height: 60px
+
+				h6
+
+					font-size: 1.5em
+
+					@media all and (max-width: 996px)
+						font-size: 1em
