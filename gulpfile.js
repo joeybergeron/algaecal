@@ -1,9 +1,7 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
-var uglify      = require('gulp-uglifyjs');
 var prefix      = require('gulp-autoprefixer');
-var Client      = require('node-rest-client').Client;
 
 /* ====================================== */
 /* Wait for build, then launch the Server */
@@ -71,18 +69,6 @@ gulp.task('js', function () {
 gulp.task('js-watch', ['js'], function (done) {
   browserSync.reload();
   done();
-});
-
-/* ============================= */
-/* JSON REST API Connet - Direct */
-/* ============================= */
-var client = new Client();
-
-client.get('https://www.algaecal.com/wp-json/acf/v2/options', function (data) {
-  // parsed response body as js object
-  // getElementById('phone-number').innerHTML = data.default_phone_number;
-
-  // console.log(data);
 });
 
 /* ========================================================== */
