@@ -9,3 +9,44 @@ _wq.push({ id: 'cecdwaq3dz', onReady: function (video) {
       $('#bundle').show('slow');
     });
   }, });
+
+// Phone Number and Open Hours
+$.getJSON('https://www.algaecal.com/wp-json/acf/v2/options', function(data) {
+  let phone = data.acf.default_phone_number;
+  $("#phone-number").text(phone);
+	$("#phone-number").attr("href", "tel:" + phone.replace(/\D/g,'') );
+
+  let currentdate = new Date();
+  let day = currentdate .getDay();
+  let time = currentdate .getHours() + '' +currentdate .getMinutes();
+  let officeHours = data.acf.office_hours;
+  let opened = false;
+  $.each(officeHours, function(key,val) {
+        if(day >= 1 & day <= 5) {
+          if(time >= val.starting_time && time <= val.closing_time) {
+            opened = true;
+          }
+        }
+    });
+  if(opened) {
+    $("#open-hours").text('Speak to our Bone Health Specialists!');
+  } else {
+    $("#open-hours").text('We are currently closed!');
+  }
+});
+
+
+// 7 Year Guarantee Modal
+$.getJSON('https://www.algaecal.com/wp-json/acf/v2/options', function(data) {
+	let title = data.acf["7yr_title"];
+	let copy = data.acf["7yr_full_copy"];
+	let seal = data.acf.seven_year_guarantee_seal;
+	$(".modal-title").text(title);
+	$(".modal-body").html(copy);
+	$(".modal-body").append('<p class="text-center"><img src="' + seal.url + '" alt="7 Year Guarantee" height="" width=""></p>');
+});
+$(document).ready(function() {
+	let source = $(".embed-responsive p").html();
+	let iframe = '<iframe id="modalVideo" src="' + source + '"></iframe>';
+	$(".embed-responsive p").replaceWith(iframe);
+});
