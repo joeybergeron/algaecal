@@ -6492,9 +6492,12 @@ nav {
   .add-to-cart-cta-btn:hover {
     -webkit-box-shadow: 0 8px 0 #3a8f41, 0 15px 20px rgba(0, 0, 0, 0.35);
             box-shadow: 0 8px 0 #3a8f41, 0 15px 20px rgba(0, 0, 0, 0.35);
-    background: #3a8f41; }
+    background: #3a8f41;
+    color: #fff;
+    text-decoration: none; }
   .add-to-cart-cta-btn:focus {
-    outline: none; }
+    outline: none;
+    text-decoration: none; }
 
 .cta-btn {
   -webkit-border-radius: 8px;
@@ -6511,6 +6514,9 @@ nav {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
   display: block;
   cursor: pointer;
   -webkit-transition: -webkit-box-shadow .1s ease-in-out;
@@ -6520,9 +6526,12 @@ nav {
   .cta-btn:hover {
     -webkit-box-shadow: 0 8px 0 #3a8f41, 0 15px 20px rgba(0, 0, 0, 0.35);
             box-shadow: 0 8px 0 #3a8f41, 0 15px 20px rgba(0, 0, 0, 0.35);
-    background: #3a8f41; }
+    background: #3a8f41;
+    color: #fff;
+    text-decoration: none; }
   .cta-btn:focus {
-    outline: none; }
+    outline: none;
+    text-decoration: none; }
 
 .cta-btn-lg {
   -webkit-border-radius: 8px;
@@ -6539,6 +6548,9 @@ nav {
   color: #fff;
   font-size: 26px;
   font-family: 'GloberBold';
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
   display: block;
   cursor: pointer;
   -webkit-transition: -webkit-box-shadow .1s ease-in-out;
@@ -6548,13 +6560,17 @@ nav {
   .cta-btn-lg:hover {
     -webkit-box-shadow: 0 8px 0 #3a8f41, 0 15px 20px rgba(0, 0, 0, 0.35);
             box-shadow: 0 8px 0 #3a8f41, 0 15px 20px rgba(0, 0, 0, 0.35);
-    background: #3a8f41; }
+    background: #3a8f41;
+    color: #fff;
+    text-decoration: none; }
   .cta-btn-lg:focus {
-    outline: none; }
+    outline: none;
+    text-decoration: none; }
 
 .products {
   width: 90%;
   margin: auto;
+  padding-top: 2em;
   display: block; }
 
 .product-card-wrapper {
@@ -6649,7 +6665,7 @@ nav {
 .video {
   padding-left: 1em;
   padding-right: 1em;
-  padding-bottom: 4em; }
+  padding-bottom: 3em; }
 
 .supplement-facts {
   display: block;
@@ -6661,6 +6677,9 @@ nav {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 2em; }
+  @media all and (max-width: 768px) {
+    .supplement-facts {
+      margin-bottom: 1em; } }
   .supplement-facts h2 {
     margin-bottom: .3em;
     margin-top: .3em;
@@ -6677,7 +6696,8 @@ nav {
     display: block;
     margin-top: -4px; }
   .supplement-facts table {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    border-color: transparent; }
   .supplement-facts .amount-per-serving th {
     border-bottom: 8px solid #000;
     border-collapse: collapse;
@@ -6851,3 +6871,6 @@ nav {
           @media all and (max-width: 996px) {
             .card .as-seen-on .bottom-row .bottom-row--box h6 {
               font-size: 1em; } }
+
+#bundle {
+  display: none; }
