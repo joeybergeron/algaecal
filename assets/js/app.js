@@ -44,9 +44,17 @@ $.getJSON('https://www.algaecal.com/wp-json/acf/v2/options', function(data) {
 	$(".modal-title").text(title);
 	$(".modal-body").html(copy);
 	$(".modal-body").append('<p class="text-center"><img src="' + seal.url + '" alt="7 Year Guarantee" height="" width=""></p>');
-});
-$(document).ready(function() {
-	let source = $(".embed-responsive p").html();
-	let iframe = '<iframe id="modalVideo" src="' + source + '"></iframe>';
-	$(".embed-responsive p").replaceWith(iframe);
+	const iframe = document.createElement('iframe')
+	iframe.setAttribute('id', 'modalVideo');
+	const url = document.querySelector('.video-container p').innerHTML;
+	iframe.setAttribute('src', url);
+	const videoContainer = document.querySelector('.video-container');
+	videoContainer.appendChild(iframe);
+	$('.video-container p').remove();
+	$('#modalVideo').attr('allowtransparency', "true");
+	$('#modalVideo').attr('frameborder', "0");
+	$('#modalVideo').attr('scrolling',"no");
+	$('#modalVideo').attr('class',"wistia_embed");
+	$('#modalVideo').attr('name',"wistia_embed");
+	$('#modalVideo').attr('width',"100%");
 });
